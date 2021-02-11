@@ -12,14 +12,20 @@ public class TokenizeSortRemoveAddApp {
 		
 		ArrayList<String> tokenizedSentence = new ArrayList<String>();
 		
-		tokenizedSentence = tokenizeSentence(sentence);
+		tokenizedSentence = tokenizeSentence(sentence); //task one complete for 2 points
 		
-		printArrayList(tokenizedSentence);
+		printArrayList(tokenizedSentence); //task two complete for 2 points
 		
-		
+		ArrayList<String > sortedTokenizedSentence = new ArrayList<String>();
+		sortedTokenizedSentence = sortTheArrayList(tokenizedSentence); //task three completed for 4 points
 		
 		
 
+	}
+
+	private static ArrayList<String> sortTheArrayList(ArrayList<String> tokenizedSentence) {
+		Collections.sort(tokenizedSentence);
+		return tokenizedSentence;
 	}
 
 	private static void printArrayList(ArrayList<String> tokenizedSentence) {
