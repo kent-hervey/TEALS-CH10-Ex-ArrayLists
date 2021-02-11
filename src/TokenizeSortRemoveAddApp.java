@@ -26,7 +26,41 @@ public class TokenizeSortRemoveAddApp {
 		listNoDuplicates = removeDuplicates(sortedTokenizedSentence);
 		
 		printArrayList(listNoDuplicates);
+		
+		//now adding word, but keeping same ArrayList
+		
+		listNoDuplicates = addWord(listNoDuplicates, "maple");
+		listNoDuplicates = addWord(listNoDuplicates, "able");
+		listNoDuplicates = addWord(listNoDuplicates, "zebra");
+		
+		printArrayList(listNoDuplicates);
 
+	}
+
+	private static ArrayList<String> addWord(ArrayList<String> list, String string) {
+		// TODO Auto-generated method stub
+		//compareTo() method is used for comparing two strings lexicographically.
+		//if first object is less than second, then return negative
+		//ob1.compareTo(obj2)
+		//stringA.compareTo( stringB ) returns 0.
+		//Memory Aid: think of the strings in a dictionary as arranged from smallest to largest. 
+		//Then stringA - stringB would produce a negative values if stringA came before StringB.
+		
+		for(int i=0;i<list.size();i++) {
+			if(!(list.get(i).compareTo(string)<=0)) {
+				System.out.println("looks like " + string + " comes just before  " + list.get(i));
+				list.add(i, string);
+				break;
+			}
+			else if(i == list.size()-1){
+				System.out.println(string + " shoudl be put at end");
+				list.add(string);
+				break;
+				
+			}
+		}
+		
+		return list;
 	}
 
 	private static ArrayList<String> removeDuplicates(ArrayList<String> list) {
