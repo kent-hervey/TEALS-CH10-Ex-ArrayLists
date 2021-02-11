@@ -3,7 +3,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Exercise5 {
-	
 	/*
 	Write a method called scaleByK that takes an ArrayList of integers as a parameter and replaces every integer of value k with k copies of itself.  
 	For example if the list stores the values {4, 1, 2, 0, 3} before the method is called, it 
@@ -11,8 +10,6 @@ public class Exercise5 {
 	Zeroes and negative numbers should be removed from the list by this method 
 	
 	*/
-	
-
 	public static void main(String[] args) {
 
 		List<Integer> listIntegers = new ArrayList<Integer>(Arrays.asList(4, 1, 2, 0, 3));
@@ -30,7 +27,6 @@ public class Exercise5 {
 		List<Integer> scaledList = new ArrayList<Integer>();
 		
 		for(Integer elementValue: listIntegers ) {
-			
 			if(elementValue > 0) {
 				System.out.println("element value is:  " + elementValue);
 				for(int i=0; i < elementValue; i++) {
@@ -40,7 +36,6 @@ public class Exercise5 {
 		}
 		//
 		return scaledList;
-		
 	}
 
 }
