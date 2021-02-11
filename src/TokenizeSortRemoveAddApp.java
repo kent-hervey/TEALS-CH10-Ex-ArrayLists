@@ -14,12 +14,16 @@ public class TokenizeSortRemoveAddApp {
 		
 		tokenizedSentence = tokenizeSentence(sentence);
 		
-		System.out.println("outputed tokenized sentence:  " +  tokenizedSentence);
+		printArrayList(tokenizedSentence);
 		
 		
 		
 		
 
+	}
+
+	private static void printArrayList(ArrayList<String> tokenizedSentence) {
+		System.out.println("outputed tokenized sentence:  " +  tokenizedSentence);
 	}
 
 	private static ArrayList<String> tokenizeSentence(String sentence) {
