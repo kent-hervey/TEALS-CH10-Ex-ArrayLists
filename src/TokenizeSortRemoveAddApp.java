@@ -34,6 +34,19 @@ public class TokenizeSortRemoveAddApp {
 		listNoDuplicates = addWord(listNoDuplicates, "zebra");
 		
 		printArrayList(listNoDuplicates);
+		
+		printAllLists(sentence, tokenizedSentence, sortedTokenizedSentence, listNoDuplicates);
+
+	}
+
+	private static void printAllLists(String sentence, ArrayList<String> tokenizedSentence, ArrayList<String> sortedTokenizedSentence, ArrayList<String> listNoDuplicates) {
+		// TODO Auto-generated method stub
+		System.out.println("Here is the original sentence, with various task outputs");
+		System.out.println("original:  " + sentence);
+		System.out.println("Tokenized (split into words: " +  tokenizedSentence);
+		System.out.println("Sorted version:  " + sortedTokenizedSentence);
+		System.out.println("list with no duplicates and words added:  " + listNoDuplicates);
+		
 
 	}
 
@@ -48,12 +61,12 @@ public class TokenizeSortRemoveAddApp {
 		
 		for(int i=0;i<list.size();i++) {
 			if(!(list.get(i).compareTo(string)<=0)) {
-				System.out.println("looks like " + string + " comes just before  " + list.get(i));
+				//System.out.println("looks like " + string + " comes just before  " + list.get(i));
 				list.add(i, string);
 				break;
 			}
 			else if(i == list.size()-1){
-				System.out.println(string + " shoudl be put at end");
+				//System.out.println(string + " shoudl be put at end");
 				list.add(string);
 				break;
 				
